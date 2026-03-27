@@ -16,7 +16,7 @@ const corsOptions = {
     "http://localhost:5173",
     /\.web\.app$/,
     /\.firebaseapp\.com$/,
-    "https://club-hub-front-259768411130.northamerica-northeast2.run.app/",
+    "https://club-hub-front-259768411130.northamerica-northeast2.run.app",
     /\.run\.app$/,
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
