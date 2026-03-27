@@ -12,17 +12,21 @@ import memberRoutes from "./routes/members.js";
 import signupRoutes from "./routes/signup.js";
 
 const corsOptions = {
-  origin: "http://localhost:5173", // Your Vue dev server
+  origin: [
+    "http://localhost:5173", // 允许你本地开发调试
+    /\.web\.app$/, // 允许你未来的 Firebase 域名 (xxx.web.app)
+    /\.firebaseapp\.com$/, // 允许你未来的 Firebase 预演域名
+  ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"], // 👈 CRITICAL: Must include Authorization
-  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true, // 如果你的登录用到了 Cookie 或 Session，这一行必须有
 };
 
 dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Database Connection
