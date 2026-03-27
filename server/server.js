@@ -17,6 +17,7 @@ const corsOptions = {
     /\.web\.app$/,
     /\.firebaseapp\.com$/,
     "https://club-hub-front-259768411130.northamerica-northeast2.run.app/",
+    /\.run\.app$/,
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
