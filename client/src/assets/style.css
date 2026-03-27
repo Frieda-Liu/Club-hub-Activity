@@ -1,0 +1,277 @@
+/* --- Global Reset & Typography --- */
+body {
+  margin: 0;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #f8fafc; /* Lighter, cleaner gray */
+  color: #1e293b;
+}
+
+.page {
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+/* --- Hero Header --- */
+.app-header {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 2.25rem;
+  color: #0f766e; /* Your dark teal */
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.app-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* --- Sections & Layout --- */
+.section {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Forms & Inputs --- */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: flex-end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.field span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+/* --- Buttons --- */
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #0d9488;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.1s,
+    background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0f766e;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* --- Event Sheets (Accordion) --- */
+.sheet {
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.sheet:hover {
+  border-color: #0d9488;
+}
+
+.sheet-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sheet-toggle strong {
+  font-size: 1.1rem;
+  color: #0f172a;
+  display: block;
+}
+
+.sheet-meta {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+/* --- Tables & Slots --- */
+.slots {
+  background-color: #f8fafc;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #f1f5f9;
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #475569;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* --- Status Badges --- */
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge-available {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge-full {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* --- Feedback --- */
+.error {
+  color: #dc2626;
+  background: #fef2f2;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.info {
+  color: #0d9488;
+  font-weight: 600;
+}
+/* --- Vertical Slot Configuration --- */
+.form-main-grid {
+  display: flex;
+  flex-direction: column; /* This makes it vertical */
+  gap: 1.25rem;
+  max-width: 500px; /* Limits width so it doesn't stretch too far on desktop */
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-group input {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+.helper {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+/* Action buttons at the bottom */
+.slot-actions {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically on mobile */
+  gap: 10px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .slot-actions {
+    flex-direction: row; /* Side-by-side buttons on larger screens */
+  }
+}
