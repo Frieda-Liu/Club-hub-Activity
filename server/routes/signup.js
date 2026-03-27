@@ -1,5 +1,5 @@
 import express from "express";
-import SignUp from "../data/SignUp.js"; // Your Mongoose Schema
+import SignUp from "../data/Signup.js"; // Your Mongoose Schema
 import { requireAuth, requireRole } from "../middleware/auth.js";
 
 const router = express.Router();
