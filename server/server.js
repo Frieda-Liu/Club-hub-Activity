@@ -13,9 +13,10 @@ import signupRoutes from "./routes/signup.js";
 
 const corsOptions = {
   origin: [
-    "http://localhost:5173", // 允许你本地开发调试
-    /\.web\.app$/, // 允许你未来的 Firebase 域名 (xxx.web.app)
-    /\.firebaseapp\.com$/, // 允许你未来的 Firebase 预演域名
+    "http://localhost:5173",
+    /\.web\.app$/,
+    /\.firebaseapp\.com$/,
+    "https://club-hub-front-259768411130.northamerica-northeast2.run.app/",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
